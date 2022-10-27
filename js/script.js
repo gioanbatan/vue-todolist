@@ -51,10 +51,10 @@ createApp({
         addNewItemToList() {
             this.newToDoItem.text = this.newToDoItem.text.trim();
             console.log(this.newToDoItem.text)
-            if (this.newToDoItem) {
+            if (this.newToDoItem.text) {
                 this.toDoList.push({...this.newToDoItem})
+                this.newToDoItem.text = "";
             } 
         }
-
     }
 }).mount("#app");
