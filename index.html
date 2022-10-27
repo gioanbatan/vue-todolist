@@ -29,8 +29,8 @@
                 <div class="add-items">
                     <label for="add-input">Add an ToDo Item</label>
                     <div class="add-interaction">
-                        <input type="text" id="add-input" v-model="">
-                        <button class="add-item-btn">Add</button>
+                        <input type="text" id="add-input" v-model="newToDoItem.text">
+                        <button class="add-item-btn" @click="addNewItemToList">Add</button>
                     </div>
                 </div>
 

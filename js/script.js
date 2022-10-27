@@ -47,6 +47,14 @@ createApp({
         removeToDoItem(index) {
             console.log("AOO");
             this.toDoList.splice(index,1);
+        },
+        addNewItemToList() {
+            this.newToDoItem.text = this.newToDoItem.text.trim();
+            console.log(this.newToDoItem.text)
+            if (this.newToDoItem) {
+                this.toDoList.push({...this.newToDoItem})
+            } 
         }
+
     }
 }).mount("#app");
