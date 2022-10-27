@@ -23,7 +23,21 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            test: "TEST"
+            show: false,
+            toDoList: [
+                {
+                    text: "Preparare il la valigia",
+                    isDone: false
+                },
+                {
+                    text: "Spazzare il garage",
+                    isDone: true
+                },
+                {
+                    text: "Lavare l'auto",
+                    isDone: false
+                }
+            ]
         }
     },
     methods: {

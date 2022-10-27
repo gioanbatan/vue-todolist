@@ -15,10 +15,71 @@ img {
 
 /* VARIABLES */
 :root {
-    --bg-color: #aaccff;
+    /* Colors */
+    --bg-color: #dd9955;
+    --bg-paper: #ffeeaa;
+    --ink: #333366;
+}
+
+/* UTILITIES */
+.line-through {
+    text-decoration: line-through;
 }
 
 /* COMMON */
 body {
     background-color: var(--bg-color);
+}
+
+/* MAIN */
+main {
+    width: 85%;
+    min-height: 95vh;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    background-color: var(--bg-paper);
+    color: var(--ink);
+    font-family: 'Freehand', cursive;
+    font-size: 1.2rem;
+    box-shadow: 3px 3px 0 0 #00000066;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+
+    border-bottom: 2px solid ;
+}
+
+main ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+main li {
+    margin-top: 1rem;
+    border-bottom: 1px dashed var(--ink);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding: 3rem;
+
+        font-size: 1.5rem;
+    }
+    main h1 {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    main ul {
+        margin-top: 2rem;
+    }
 }
