@@ -23,7 +23,10 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            show: false,
+            newToDoItem: {
+                text: "",
+                isDone: false
+            },
             toDoList: [
                 {
                     text: "Preparare il la valigia",

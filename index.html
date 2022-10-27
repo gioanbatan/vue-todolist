@@ -26,6 +26,14 @@
             <div class="container">
                 <h1>ToDo List</h1>
                 
+                <div class="add-items">
+                    <label for="add-input">Add an ToDo Item</label>
+                    <div class="add-interaction">
+                        <input type="text" id="add-input" v-model="">
+                        <button class="add-item-btn">Add</button>
+                    </div>
+                </div>
+
                 <p class="empty-list" v-if="toDoList.length === 0">Non hai nulla da fare!!!</p>
                 <ul v-else>
                     <li v-for="(toDoElement,toDoIndex) in toDoList">

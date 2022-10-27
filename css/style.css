@@ -13,11 +13,6 @@ img {
     max-width: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
 /* VARIABLES */
 :root {
     /* Colors */
@@ -40,6 +35,12 @@ body {
     background-color: var(--bg-color);
 }
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
 /* MAIN */
 main {
     width: 85%;
@@ -47,7 +48,7 @@ main {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 2rem;
-
+    
     background-color: var(--bg-paper);
     color: var(--ink);
     font-family: 'Freehand', cursive;
@@ -55,15 +56,63 @@ main {
     box-shadow: 3px 3px 0 0 #00000066;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
+.add-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem 0;
+    
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    
+}
+
+.add-items label {
+    min-width: ;
+    margin: 0 1rem;
+}
+
+.add-items .add-interaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-items input {
+    width: 100%;
+    padding: 0.3rem;
+    font: inherit;
+    text-decoration: none;
+    background-color: var(--bg-paper);
+    filter: brightness(1.2);
+    border-radius: 10px;
+    border: 2px dashed var(--ink);
+}
+
+.add-items button {
+    margin: 1rem 1rem;
+    padding: 0.2rem 1.2rem;
+    font: inherit;
+    text-decoration: none;
+    
+    border-radius: 15px;
+    background-color: var(--bg-paper);
+    border: 3px dashed var(--ink);
+}
+
+.add-items button:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+    box-shadow: 0 0 5px 5px var(--bg-paper);
 }
 
 main h1 {
     font-size: 2.5rem;
     padding-bottom: 1rem;
-
+    
     border-bottom: 2px solid ;
 }
 
@@ -83,13 +132,32 @@ main li {
     border-bottom: 1px dashed var(--ink);
 }
 
+main li span a {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--bg-paper);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main li span a:hover {
+    transform: scale(1.4);
+    filter: brightness(0.8);
+    box-shadow: 0 0 3px 3px var(--bg-paper);
+}
+
 @media screen and (min-width: 768px) {
     main {
         padding: 3rem;
-
+        
         font-size: 1.5rem;
     }
-
+    
     main .empty-list {
         font-size: 3.2rem;
     }
@@ -101,5 +169,14 @@ main li {
 
     main ul {
         margin-top: 2rem;
+    }
+
+    .add-items .add-interaction  {
+        flex-direction: row;
+    }
+
+    .add-items label {
+        font-size: 1.5rem;
+        min-width: 170px;
     }
 }
