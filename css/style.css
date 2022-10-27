@@ -7,6 +7,7 @@
 
 html {
     font-size: 100%;
+    user-select: none;
 }
 
 img {
@@ -56,6 +57,15 @@ main {
     box-shadow: 3px 3px 0 0 #00000066;
 }
 
+/* Main title */
+main h1 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    
+    border-bottom: 2px solid ;
+}
+
+/* Input section */
 .add-items {
     display: flex;
     flex-direction: column;
@@ -109,13 +119,7 @@ main {
     box-shadow: 0 0 5px 5px var(--bg-paper);
 }
 
-main h1 {
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
-    
-    border-bottom: 2px solid ;
-}
-
+/* List section */
 main .empty-list {
     font-size: 2rem;
 }

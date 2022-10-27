@@ -29,7 +29,7 @@ createApp({
             },
             toDoList: [
                 {
-                    text: "Preparare il la valigia",
+                    text: "Preparare la valigia",
                     isDone: false
                 },
                 {
