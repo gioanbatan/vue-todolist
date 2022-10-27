@@ -37,19 +37,21 @@
                 <p class="empty-list" v-if="toDoList.length === 0">Non hai nulla da fare!!!</p>
                 <ul v-else>
                     <li v-for="(toDoElement,toDoIndex) in toDoList">
-                        <span 
-                            :class="(toDoElement.isDone === true) ? 'line-through half-opacity' : ''">
+                        <span class="item"
+                            :class="(toDoElement.isDone === true) ? 'line-through half-opacity' : ''"
+                            @click="toDoElement.isDone = !toDoElement.isDone">
                             {{ toDoElement.text }}
                         </span>
 
                         <span>
-                            <span v-if="toDoElement.isDone === true">
+                            <span class="check" v-if="toDoElement.isDone === true"
+                            @click="toDoElement.isDone = !toDoElement.isDone">
                               &check;  
                             </span>
 
-                            <a @click.prevent="removeToDoItem(toDoIndex)">
+                            <span class="cross" @click.prevent="removeToDoItem(toDoIndex)">
                                 &cross;
-                            </a>    
+                            </span>    
                         </span>
 
                     </li>

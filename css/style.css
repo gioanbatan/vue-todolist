@@ -132,7 +132,38 @@ main li {
     border-bottom: 1px dashed var(--ink);
 }
 
-main li span a {
+
+main li .item {
+    display: inline-block;
+    background-color: var(--bg-paper);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main li .item:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+    box-shadow: 0 0 3px 3px var(--bg-paper);
+}
+
+main li .check {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    background-color: var(--bg-paper);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main li span .check:hover {
+    transform: scale(1.4);
+    filter: brightness(0.8);
+    box-shadow: 0 0 3px 3px var(--bg-paper);
+}
+
+main li span .cross {
     display: inline-block;
     width: 1.6rem;
     height: 1.6rem;
@@ -145,7 +176,7 @@ main li span a {
     cursor: pointer;
 }
 
-main li span a:hover {
+main li span .cross:hover {
     transform: scale(1.4);
     filter: brightness(0.8);
     box-shadow: 0 0 3px 3px var(--bg-paper);
