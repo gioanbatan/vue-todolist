@@ -41,8 +41,9 @@ createApp({
         }
     },
     methods: {
-        doTest() {
-            console.log(this.test);
+        removeToDoItem(index) {
+            console.log("AOO");
+            this.toDoList.splice(index,1);
         }
     }
 }).mount("#app");

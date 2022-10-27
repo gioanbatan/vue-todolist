@@ -26,9 +26,25 @@
             <div class="container">
                 <h1>ToDo List</h1>
                 
-                <p v-if="show">Non hai nulla da fare!!!</p>
+                <p class="empty-list" v-if="toDoList.length === 0">Non hai nulla da fare!!!</p>
                 <ul v-else>
-                    <li v-for="(toDoElement) in toDoList" :class="(toDoElement.isDone === true) ? 'line-through' : ''">{{ toDoElement.text }}</li>
+                    <li v-for="(toDoElement,toDoIndex) in toDoList">
+                        <span 
+                            :class="(toDoElement.isDone === true) ? 'line-through half-opacity' : ''">
+                            {{ toDoElement.text }}
+                        </span>
+
+                        <span>
+                            <span v-if="toDoElement.isDone === true">
+                              &check;  
+                            </span>
+
+                            <a @click.prevent="removeToDoItem(toDoIndex)">
+                                &cross;
+                            </a>    
+                        </span>
+
+                    </li>
                 </ul>
                 
             </div>

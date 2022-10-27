@@ -13,6 +13,11 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 /* VARIABLES */
 :root {
     /* Colors */
@@ -24,6 +29,10 @@ img {
 /* UTILITIES */
 .line-through {
     text-decoration: line-through;
+}
+
+.half-opacity {
+    opacity: 0.5;
 }
 
 /* COMMON */
@@ -58,12 +67,18 @@ main h1 {
     border-bottom: 2px solid ;
 }
 
+main .empty-list {
+    font-size: 2rem;
+}
+
 main ul {
     list-style: none;
     margin-top: 1rem;
 }
 
 main li {
+    display: flex;
+    justify-content: space-between;
     margin-top: 1rem;
     border-bottom: 1px dashed var(--ink);
 }
@@ -74,6 +89,11 @@ main li {
 
         font-size: 1.5rem;
     }
+
+    main .empty-list {
+        font-size: 3.2rem;
+    }
+    
     main h1 {
         font-size: 3rem;
         padding-bottom: 2rem;
